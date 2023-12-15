@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("SCM checkout") {
             steps {
-                sh git 'https://github.com/Kirankmane/onlinebookstore.git'
+                git 'https://github.com/Kirankmane/onlinebookstore.git'
             }
         }
 
