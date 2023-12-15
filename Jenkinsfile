@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("SCM checkout") {
             steps {
-                sh git url
+                sh git 'https://github.com/Kirankmane/onlinebookstore.git'
             }
         }
 
@@ -19,5 +19,7 @@ pipeline {
                 echo "test stage will be success"
             }
         }
+    }
+}
 
         
