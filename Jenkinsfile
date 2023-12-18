@@ -22,7 +22,8 @@ pipeline {
 
         stage ("Deploy to Tomcat") {
             steps { 
-                sh 'sudo -S cp -r /var/lib/jenkins/workspace/Online-book-store/target/onlinebookstore.war /opt/tomcat/apache-tomcat-9.0.68/webapps/'
+                sh 'sudo cp /var/lib/jenkins/workspace/Online-book-store/target/onlinebookstore.war /opt/tomcat/apache-tomcat-9.0.68/webapps/'
+/'
             }
         }
     }
