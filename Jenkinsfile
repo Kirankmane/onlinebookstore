@@ -9,7 +9,7 @@ pipeline {
 
         stage ("Build Stage") {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean install'
                 echo "build stage will be susscess"
             }
         }
@@ -22,7 +22,7 @@ pipeline {
 
         stage ("Deploy to Tomcat") {
             steps { 
-                sh 'sudo cp  -R /var/lib/jenkins/workspace/Online-book-store/target/onlinebookstore.war /opt/tomcat/apache-tomcat-9.0.68/webapps/'
+                sh 'sudo -S cp -r /var/lib/jenkins/workspace/Online-book-store/target/onlinebookstore.war /opt/tomcat/apache-tomcat-9.0.68/webapps/'
             }
         }
     }
